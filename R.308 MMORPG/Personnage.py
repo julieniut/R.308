@@ -11,16 +11,21 @@ class Personnage:
 
     def Attaque(self,opposant):
         if self.action > opposant.action:
-            opposant.pv-= self.degats()
+            opposant.pv-= self.__niveau
+            print(f"{self.__pseudo} attaque {opposant.__pseudo} pv {opposant.pv}")
             if opposant.pv >0:
-                self.pv -= opposant.degats()
+                self.pv -= opposant.__niveau
+                print(f"{opposant.__pseudo} attaque {self.__pseudo} pv {self.pv}")
         elif opposant.action>self.action:
-            self.pv-= opposant.degats()
+            self.pv-= opposant.__niveau
+            print(f"{opposant.__pseudo} attaque {self.__pseudo} pv {self.pv}")
             if self.pv>0:
-                opposant.pv -= self.degats()
+                opposant.pv -= self.__niveau
+                print(f"{self.__pseudo} attaque {opposant.__pseudo} pv {opposant.pv}")
         else:
-            opposant.pv-=self.degats()
-            self.pv-= opposant.degats()
+            opposant.pv-=self.__niveau
+            self.pv-= opposant.__niveau
+        print(f"{self.__pseudo} à  {self.pv} pv et {opposant.__pseudo} à {opposant.pv} pv")
 
     def Combat(self, opposant):
         while (self.pv > 0 and opposant.pv > 0):

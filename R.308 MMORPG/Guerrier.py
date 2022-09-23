@@ -1,4 +1,4 @@
-import Peronnage as Personnage
+import Personnage as Personnage
 
 class Guerrier(Personnage):
     def __init__(self, pseudo: str, lvl: int = 1):
