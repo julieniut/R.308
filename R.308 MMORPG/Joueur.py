@@ -1,4 +1,4 @@
-import Personnage as perso
+from Personnage import Personnage
 
 class Joueur:
     def __int__(self, nom: str, list_perso: list = []):

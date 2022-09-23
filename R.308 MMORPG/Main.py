@@ -1,12 +1,16 @@
 import sys
 import Personnage as perso
-#import Guerrier
-
+import Guerrier as gue
+import Joueur as joueur
 
 def main():
-    profil_par_defaut = perso.Personnage("toto",28)
-    p1 = perso.Personnage("test",10)
-    p1.Attaque(profil_par_defaut)
+    profil_par_defaut = perso.Personnage("bot")
+    p1 = perso.Personnage("toto",10)
+    p1.Combat(profil_par_defaut)
+    guerrier = gue.Guerrier("guerrier",2)
+    #j=joueur.Joueur(guerrier)
+
+    print(guerrier)
 
 
     #print(profil_par_defaut)

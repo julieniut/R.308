@@ -7,7 +7,7 @@ class Personnage:
         self.soin = soin
 
     def __str__(self):
-        return f"pseudo: {self.__pseudo} niveau: {self.__niveau} point de vie et {self.action} point d'inisiative"
+        return f"pseudo: {self.__pseudo} niveau: {self.__niveau}  point de vie {self.pv}  et {self.action} point d'inisiative"
 
     def Attaque(self,opposant):
         if self.action > opposant.action:
@@ -25,7 +25,7 @@ class Personnage:
         else:
             opposant.pv-=self.__niveau
             self.pv-= opposant.__niveau
-        print(f"{self.__pseudo} à  {self.pv} pv et {opposant.__pseudo} à {opposant.pv} pv")
+        print(f"{self.__pseudo} à {self.pv} pv et {opposant.__pseudo} à {opposant.pv} pv")
 
     def Combat(self, opposant):
         while (self.pv > 0 and opposant.pv > 0):
