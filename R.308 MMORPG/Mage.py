@@ -1,15 +1,15 @@
-from Peronnage import Personnage
+from Personnage import Personnage
 class Mage (Personnage):
-    def __init__(self, pseudo: str, lvl: int = 1):
-        super().__init__(pseudo, lvl)
-        self.action = lvl * 8 + 6
-        self.pv = lvl * 4 + 6
+    def __init__(self, pseudo: str, niveau: int = 1):
+        super().__init__(pseudo, niveau)
+        self.action = niveau * 6 + 4
+        self.pv = niveau * 5 + 10
     def __str__(self):
         return f"Mage {super().__str__()}"
 
     def soin(self):
-        self.__pv = self.__lvl*5+10
-        self.__mana = self.__lvl *5
+        self.__pv = self.__niveau*5+10
+        self.__mana = self.__niveau *5
 
 
     def degats(self)-> int:
