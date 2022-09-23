@@ -9,6 +9,13 @@ class Personnage:
     def __str__(self):
         return f"pseudo: {self.__pseudo} niveau: {self.__niveau}  point de vie {self.pv}  et {self.action} point d'inisiative"
 
+    def get_pseudo(self):
+        return self.__pseudo
+
+    def get_niveau(self):
+        return self.__niveau
+
+
     def Attaque(self,opposant):
         if self.action > opposant.action:
             opposant.pv-= self.__niveau

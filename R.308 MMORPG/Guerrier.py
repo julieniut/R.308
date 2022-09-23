@@ -12,4 +12,5 @@ class Guerrier(Personnage):
     def soin(self):
         self.__pv = self.__niveau*5+3
 
-
+    def degats(self):
+        return self.__niveau*5+3

@@ -1,7 +1,7 @@
 from Personnage import Personnage
 
 class Joueur:
-    def __int__(self, nom: str, list_perso: list = []):
+    def __init__(self, nom: str, list_perso: list = []):
         self.__nom = nom
         self.__list_perso = list_perso
 
@@ -10,9 +10,10 @@ class Joueur:
 
 
     def ajout(self, Personnage):
-        return self.__list_perso.append(Personnage)
+         self.__list_perso.append(Personnage)
 
+    #def print_list(self):
+     #   print([joueur.pseudo for joueur in self.__list_perso])
 
-    def get_perso(self):
-        return
-
+    def get_list(self):
+        return self.__list_perso
