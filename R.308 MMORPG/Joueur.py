@@ -15,5 +15,6 @@ class Joueur:
     #def print_list(self):
      #   print([joueur.pseudo for joueur in self.__list_perso])
 
+
     def get_list(self):
         return self.__list_perso

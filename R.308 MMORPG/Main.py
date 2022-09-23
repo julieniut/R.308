@@ -13,8 +13,6 @@ def main():
     #mage.Combat(guerrier)
     j = joueur.Joueur("toto")
     j.ajout(p1)
-    #j.print_list()
-    #print(([i.pseudo for i in j.get_list]))
     print(j)
     #print(guerrier)
     #print(mage)
