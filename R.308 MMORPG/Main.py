@@ -10,7 +10,7 @@ def main():
     #p1.Combat(profil_par_defaut)
     guerrier = gue.Guerrier("guerrier",2)
     mage=mag.Mage("mage",2)
-    #mage.Combat(guerrier)
+    mage.Combat(guerrier)
     j = joueur.Joueur("toto")
     j.ajout(p1)
     print(j)

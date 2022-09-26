@@ -15,23 +15,25 @@ class Personnage:
     def get_niveau(self):
         return self.__niveau
 
+    def degats(self):
+        return self.__niveau
 
     def Attaque(self,opposant):
         if self.action > opposant.action:
-            opposant.pv-= self.__niveau
+            opposant.pv-= self.degats
             print(f"{self.__pseudo} attaque {opposant.__pseudo} pv {opposant.pv}")
             if opposant.pv >0:
-                self.pv -= opposant.__niveau
+                self.pv -= opposant.degats
                 print(f"{opposant.__pseudo} attaque {self.__pseudo} pv {self.pv}")
         elif opposant.action>self.action:
-            self.pv-= opposant.__niveau
+            self.pv-= opposant.degats
             print(f"{opposant.__pseudo} attaque {self.__pseudo} pv {self.pv}")
             if self.pv>0:
-                opposant.pv -= self.__niveau
+                opposant.pv -= self.degats
                 print(f"{self.__pseudo} attaque {opposant.__pseudo} pv {opposant.pv}")
         else:
-            opposant.pv-=self.__niveau
-            self.pv-= opposant.__niveau
+            opposant.pv-=self.degats
+            self.pv-= opposant.degats
         print(f"{self.__pseudo} à {self.pv} pv et {opposant.__pseudo} à {opposant.pv} pv")
 
     def Combat(self, opposant):
@@ -39,4 +41,4 @@ class Personnage:
             self.Attaque(opposant)
 
     def Soin(self):
-        self.pv=self.__niveau
+        self.pv=self.pv
