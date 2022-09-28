@@ -10,7 +10,7 @@ class Guerrier(Personnage):
         return f"Guerrier {super().__str__()}"
 
     def soin(self):
-        self.__pv = self.__niveau*5+3
+        self.__pv = self.niveau*5+3
 
     def degats(self):
-        return self.__niveau*5+3
+        return self.niveau*2

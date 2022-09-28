@@ -4,6 +4,8 @@ class Mage (Personnage):
         super().__init__(pseudo, niveau)
         self.action = niveau * 6 + 4
         self.pv = niveau * 5 + 10
+        self.__mana=niveau*5
+
     def __str__(self):
         return f"Mage {super().__str__()}"
 

@@ -8,14 +8,20 @@ def main():
     profil_par_defaut = perso.Personnage()
     p1 = perso.Personnage("toto",10)
     #p1.Combat(profil_par_defaut)
+
     guerrier = gue.Guerrier("guerrier",2)
     mage=mag.Mage("mage",2)
-    mage.Combat(guerrier)
+    print(guerrier)
+    print(mage)
+    guerrier.Combat(mage)
+    #mage.Combat(guerrier)
+
+
     j = joueur.Joueur("toto")
     j.ajout(p1)
-    print(j)
-    #print(guerrier)
-    #print(mage)
+    #print(j)
+
+
 
     #print(f"nom {p1.get_pseudo()}")
     #print(profil_par_defaut)
