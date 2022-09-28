@@ -34,6 +34,10 @@ class Personnage:
     def niveau(self):
         return self.__niveau
 
+    def get_pseudo(self):
+        return self.__pseudo
+
+
     def degats(self):
         return self.__niveau
 

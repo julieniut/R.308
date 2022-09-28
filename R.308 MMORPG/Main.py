@@ -13,24 +13,40 @@ def main():
     mage=mag.Mage("mage",2)
     print(guerrier)
     print(mage)
-    guerrier.Combat(mage)
+    #guerrier.Combat(mage)
     #mage.Combat(guerrier)
 
 
-    j = joueur.Joueur("toto")
+    j = joueur.Joueur("Joueur 1")
     j.ajout(p1)
-    #print(j)
+    j.ajout(guerrier)
+    j.ajout(mage)
+    j.ajout(p1)
+
+    #j.supprimer(p1)
+    #joueur.Joueur.supprimer_joueur(j)
+
+    print(f"nom {p1.get_pseudo()}") #avoir le nom du personne p1
+    print(j.print_list()) #affichier la list du joueurs jS
 
 
+#découverte de pickle
 
-    #print(f"nom {p1.get_pseudo()}")
-    #print(profil_par_defaut)
-    #print(p1)
-
-
-
-
-
+import pickle
+import string
+L = list(string.ascii_letters)
+print(L)
+with open('mypicklefile', 'wb') as f1:
+    pickle.dump(L, f1)
+with open('mypicklefile', 'rb') as f1:
+    print(pickle.load(f1))
+with open('mypicklefile', 'rb') as f1:
+    O=pickle.load(f1)
+    if L==O:
+        True
+t=j.print_list()
+with open('mypicklefile', 'wb') as f1:
+    pickle.dump(t, f1)
 
 
 
